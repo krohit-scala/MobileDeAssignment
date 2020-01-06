@@ -1,0 +1,106 @@
+17:55:25.089 ScalaTest-main INFO SparkContext: Running Spark version 2.2.0
+17:55:25.398 ScalaTest-main WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+17:55:25.471 ScalaTest-main ERROR Shell: Failed to locate the winutils binary in the hadoop binary path
+java.io.IOException: Could not locate executable null\bin\winutils.exe in the Hadoop binaries.
+	at org.apache.hadoop.util.Shell.getQualifiedBinPath(Shell.java:378)
+	at org.apache.hadoop.util.Shell.getWinUtilsPath(Shell.java:393)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:386)
+	at org.apache.hadoop.util.StringUtils.<clinit>(StringUtils.java:79)
+	at org.apache.hadoop.security.Groups.parseStaticMapping(Groups.java:116)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:93)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:73)
+	at org.apache.hadoop.security.Groups.getUserToGroupsMappingService(Groups.java:293)
+	at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:283)
+	at org.apache.hadoop.security.UserGroupInformation.ensureInitialized(UserGroupInformation.java:260)
+	at org.apache.hadoop.security.UserGroupInformation.loginUserFromSubject(UserGroupInformation.java:789)
+	at org.apache.hadoop.security.UserGroupInformation.getLoginUser(UserGroupInformation.java:774)
+	at org.apache.hadoop.security.UserGroupInformation.getCurrentUser(UserGroupInformation.java:647)
+	at org.apache.spark.util.Utils$$anonfun$getCurrentUserName$1.apply(Utils.scala:2430)
+	at org.apache.spark.util.Utils$$anonfun$getCurrentUserName$1.apply(Utils.scala:2430)
+	at scala.Option.getOrElse(Option.scala:121)
+	at org.apache.spark.util.Utils$.getCurrentUserName(Utils.scala:2430)
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:295)
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:127)
+	at org.apache.spark.sql.test.TestSparkSession.<init>(TestSQLContext.scala:29)
+	at org.apache.spark.sql.test.SharedSQLContext$class.createSparkSession(SharedSQLContext.scala:56)
+	at com.org.assignment.AdsAndFraudTest.createSparkSession(AdsAndFraudTest.scala:14)
+	at org.apache.spark.sql.test.SharedSQLContext$class.beforeAll(SharedSQLContext.scala:65)
+	at com.org.assignment.AdsAndFraudTest.beforeAll(AdsAndFraudTest.scala:70)
+	at org.scalatest.BeforeAndAfterAll$class.beforeAll(BeforeAndAfterAll.scala:187)
+	at org.apache.spark.SparkFunSuite.beforeAll(SparkFunSuite.scala:31)
+	at org.scalatest.BeforeAndAfterAll$class.run(BeforeAndAfterAll.scala:253)
+	at org.apache.spark.SparkFunSuite.run(SparkFunSuite.scala:31)
+	at org.scalatest.tools.SuiteRunner.run(SuiteRunner.scala:55)
+	at org.scalatest.tools.Runner$$anonfun$doRunRunRunDaDoRunRun$3.apply(Runner.scala:2563)
+	at org.scalatest.tools.Runner$$anonfun$doRunRunRunDaDoRunRun$3.apply(Runner.scala:2557)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at org.scalatest.tools.Runner$.doRunRunRunDaDoRunRun(Runner.scala:2557)
+	at org.scalatest.tools.Runner$$anonfun$runOptionallyWithPassFailReporter$2.apply(Runner.scala:1044)
+	at org.scalatest.tools.Runner$$anonfun$runOptionallyWithPassFailReporter$2.apply(Runner.scala:1043)
+	at org.scalatest.tools.Runner$.withClassLoaderAndDispatchReporter(Runner.scala:2722)
+	at org.scalatest.tools.Runner$.runOptionallyWithPassFailReporter(Runner.scala:1043)
+	at org.scalatest.tools.Runner$.main(Runner.scala:860)
+	at org.scalatest.tools.Runner.main(Runner.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at scala.tools.eclipse.scalatest.launching.ScalaTestLauncher$.main(ScalaTestLauncher.scala:20)
+	at scala.tools.eclipse.scalatest.launching.ScalaTestLauncher.main(ScalaTestLauncher.scala)
+17:55:25.548 ScalaTest-main INFO SparkContext: Submitted application: test-sql-context
+17:55:25.576 ScalaTest-main INFO SecurityManager: Changing view acls to: kumar.rohit
+17:55:25.576 ScalaTest-main INFO SecurityManager: Changing modify acls to: kumar.rohit
+17:55:25.577 ScalaTest-main INFO SecurityManager: Changing view acls groups to: 
+17:55:25.578 ScalaTest-main INFO SecurityManager: Changing modify acls groups to: 
+17:55:25.578 ScalaTest-main INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(kumar.rohit); groups with view permissions: Set(); users  with modify permissions: Set(kumar.rohit); groups with modify permissions: Set()
+17:55:26.152 ScalaTest-main INFO Utils: Successfully started service 'sparkDriver' on port 60602.
+17:55:26.197 ScalaTest-main INFO SparkEnv: Registering MapOutputTracker
+17:55:26.217 ScalaTest-main INFO SparkEnv: Registering BlockManagerMaster
+17:55:26.221 ScalaTest-main INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+17:55:26.221 ScalaTest-main INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+17:55:26.235 ScalaTest-main INFO DiskBlockManager: Created local directory at C:\Users\kumar.rohit\AppData\Local\Temp\blockmgr-597f8ea2-d231-470d-bd34-94a159eb8d6e
+17:55:26.251 ScalaTest-main INFO MemoryStore: MemoryStore started with capacity 1953.6 MB
+17:55:26.311 ScalaTest-main INFO SparkEnv: Registering OutputCommitCoordinator
+17:55:26.392 ScalaTest-main INFO log: Logging initialized @2399ms
+17:55:26.471 ScalaTest-main INFO Server: jetty-9.3.z-SNAPSHOT
+17:55:26.493 ScalaTest-main INFO Server: Started @2501ms
+17:55:26.532 ScalaTest-main INFO AbstractConnector: Started ServerConnector@2f55b038{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+17:55:26.533 ScalaTest-main INFO Utils: Successfully started service 'SparkUI' on port 4040.
+17:55:26.593 ScalaTest-main INFO ContextHandler: Started o.s.j.s.ServletContextHandler@476b0ae6{/jobs,null,AVAILABLE,@Spark}
+17:55:26.593 ScalaTest-main INFO ContextHandler: Started o.s.j.s.ServletContextHandler@7e22550a{/jobs/json,null,AVAILABLE,@Spark}
+17:55:26.595 ScalaTest-main INFO ContextHandler: Started o.s.j.s.ServletContextHandler@62452cc9{/jobs/job,null,AVAILABLE,@Spark}
+17:55:26.601 ScalaTest-main INFO ContextHandler: Started o.s.j.s.ServletContextHandler@5bc9ba1d{/jobs/job/json,null,AVAILABLE,@Spark}
+17:55:26.603 ScalaTest-main INFO ContextHandler: Started o.s.j.s.ServletContextHandler@7516e4e5{/stages,null,AVAILABLE,@Spark}
+17:55:26.605 ScalaTest-main INFO ContextHandler: Started o.s.j.s.ServletContextHandler@5e81e5ac{/stages/json,null,AVAILABLE,@Spark}
+17:55:26.607 ScalaTest-main INFO ContextHandler: Started o.s.j.s.ServletContextHandler@3fa2213{/stages/stage,null,AVAILABLE,@Spark}
+17:55:26.612 ScalaTest-main INFO ContextHandler: Started o.s.j.s.ServletContextHandler@320de594{/stages/stage/json,null,AVAILABLE,@Spark}
+17:55:26.614 ScalaTest-main INFO ContextHandler: Started o.s.j.s.ServletContextHandler@abf688e{/stages/pool,null,AVAILABLE,@Spark}
+17:55:26.616 ScalaTest-main INFO ContextHandler: Started o.s.j.s.ServletContextHandler@1a7288a3{/stages/pool/json,null,AVAILABLE,@Spark}
+17:55:26.618 ScalaTest-main INFO ContextHandler: Started o.s.j.s.ServletContextHandler@58fe0499{/storage,null,AVAILABLE,@Spark}
+17:55:26.619 ScalaTest-main INFO ContextHandler: Started o.s.j.s.ServletContextHandler@665df3c6{/storage/json,null,AVAILABLE,@Spark}
+17:55:26.623 ScalaTest-main INFO ContextHandler: Started o.s.j.s.ServletContextHandler@4044fb95{/storage/rdd,null,AVAILABLE,@Spark}
+17:55:26.625 ScalaTest-main INFO ContextHandler: Started o.s.j.s.ServletContextHandler@36f48b4{/storage/rdd/json,null,AVAILABLE,@Spark}
+17:55:26.626 ScalaTest-main INFO ContextHandler: Started o.s.j.s.ServletContextHandler@3b7ff809{/environment,null,AVAILABLE,@Spark}
+17:55:26.628 ScalaTest-main INFO ContextHandler: Started o.s.j.s.ServletContextHandler@62e6b5c8{/environment/json,null,AVAILABLE,@Spark}
+17:55:26.631 ScalaTest-main INFO ContextHandler: Started o.s.j.s.ServletContextHandler@7b8233cd{/executors,null,AVAILABLE,@Spark}
+17:55:26.634 ScalaTest-main INFO ContextHandler: Started o.s.j.s.ServletContextHandler@1cbf6e72{/executors/json,null,AVAILABLE,@Spark}
+17:55:26.642 ScalaTest-main INFO ContextHandler: Started o.s.j.s.ServletContextHandler@1af146{/executors/threadDump,null,AVAILABLE,@Spark}
+17:55:26.645 ScalaTest-main INFO ContextHandler: Started o.s.j.s.ServletContextHandler@2a8d39c4{/executors/threadDump/json,null,AVAILABLE,@Spark}
+17:55:26.720 ScalaTest-main INFO ContextHandler: Started o.s.j.s.ServletContextHandler@72758afa{/static,null,AVAILABLE,@Spark}
+17:55:26.723 ScalaTest-main INFO ContextHandler: Started o.s.j.s.ServletContextHandler@2bd2b28e{/,null,AVAILABLE,@Spark}
+17:55:26.729 ScalaTest-main INFO ContextHandler: Started o.s.j.s.ServletContextHandler@57fd91c9{/api,null,AVAILABLE,@Spark}
+17:55:26.729 ScalaTest-main INFO ContextHandler: Started o.s.j.s.ServletContextHandler@26425897{/jobs/job/kill,null,AVAILABLE,@Spark}
+17:55:26.730 ScalaTest-main INFO ContextHandler: Started o.s.j.s.ServletContextHandler@58c34bb3{/stages/stage/kill,null,AVAILABLE,@Spark}
+17:55:26.734 ScalaTest-main INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://192.168.4.184:4040
+17:55:26.899 ScalaTest-main INFO Executor: Starting executor ID driver on host localhost
+17:55:26.935 ScalaTest-main INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 60615.
+17:55:26.936 ScalaTest-main INFO NettyBlockTransferService: Server created on 192.168.4.184:60615
+17:55:26.938 ScalaTest-main INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+17:55:26.940 ScalaTest-main INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 192.168.4.184, 60615, None)
+17:55:26.944 dispatcher-event-loop-2 INFO BlockManagerMasterEndpoint: Registering block manager 192.168.4.184:60615 with 1953.6 MB RAM, BlockManagerId(driver, 192.168.4.184, 60615, None)
+17:55:26.947 ScalaTest-main INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 192.168.4.184, 60615, None)
+17:55:26.947 ScalaTest-main INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 192.168.4.184, 60615, None)
+17:55:27.179 ScalaTest-main INFO ContextHandler: Started o.s.j.s.ServletContextHandler@78461bc4{/metrics/json,null,AVAILABLE,@Spark}
+17:55:27.262 ScalaTest-main-running-AdsAndFraudTest WARN SparkContext: Using an existing SparkContext; some configuration may not take effect.
+17:55:31.974 ScalaTest-main-running-AdsAndFraudTest WARN SparkSession$Builder: Using an existing SparkSession; some configuration may not take effect.
+17:55:32.885 ScalaTest-main-running-AdsAndFraudTest WARN SparkSession$Builder: Using an existing SparkSession; some configuration may not take effect.
